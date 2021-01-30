@@ -6,6 +6,10 @@
     list-style-type: none;
 }
 
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background: url(../images/bg.png);
@@ -86,6 +90,14 @@ a.active {
     padding: 2px;
     margin-top: 10px;
     word-spacing: 20px;
+    border: none;
+    background-color: white;
+}
+
+.plus-minus-btn,
+input,
+.btn-style {
+    outline: none;
 }
 
 .booking-form .calculations {
