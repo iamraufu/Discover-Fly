@@ -30,81 +30,82 @@
         <div class="booking-form">
             <h3>Booking Flights</h3>
             <div class="input-group">
-                <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+                <label for="flying from">Flying From</label>
+                <input class="inp-style" type="text" name="flying from" placeholder="Dhaka, Bangladesh">
             </div>
             <div class="input-group">
-                <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
+                <label for="flying to">Flying To</label>
+                <input class="inp-style" type="text" name="flying to" placeholder="New York, United States">
             </div>
             <div class="inputs">
                 <div class="input-group">
-                    <label " for=" ">Departure</label>
-                    <input class="inp-style " type="date " name=" ">
+                    <label for="start">Departure</label>
+                    <input class="inp-style" type="date" name="start" min="2021-01-30" value="2021-01-30">
                 </div>
                 <div class="input-group ">
-                    <label for=" ">Return</label>
-                    <input class="inp-style " type="date " name=" ">
+                    <label for="return">Return</label>
+                    <input class="inp-style" type="date" name="return">
                 </div>
             </div>
             <div class="input-group f-class ">
                 <div>
-                    <label for=" ">First Class ($150)</label>
-                    <input class="inp-style inp-width " type="number " name=" " value="2 ">
+                    <label for="first-class">First Class ($150)</label>
+                    <input class="inp-style inp-width" type="number" name="first-class" id="first-class-count" value="2">
                 </div>
                 <div class="plus-minus-btn ">
-                    <p>+ -</p>
+                    <button onclick="handleTicketChange('first-class',false)" class="plus-minus-btn"><p><span>-</span></p></button>
+                    <button onclick="handleTicketChange('first-class',true)" class="plus-minus-btn"><p><span>+</span></p></button>
                 </div>
             </div>
-            
+
             <div class="input-group f-class ">
                 <div>
-                    <label for=" ">Economy ($100)</label>
-                    <input class="inp-style inp-width " type="number " name=" " value="2 ">
+                    <label for="economy">Economy ($100)</label>
+                    <input class="inp-style inp-width" type="number" name="economy" id="economy-count" value="2">
                 </div>
                 <div class="plus-minus-btn ">
-                    <p> <span>+</span> <span>-</span> </p>
+                    <button onclick="handleTicketChange('economy',false)" class="plus-minus-btn"><p><span>-</span></p></button>
+                    <button onclick="handleTicketChange('economy',true)" class="plus-minus-btn"><p><span>+</span></p></button>
                 </div>
             </div>
             <div class="calculations ">
-                <div class="amount ">
-                    <div class="left ">
+                <div class="amount">
+                    <div class="left">
                         <p>Subtotal</p>
                     </div>
-                    <div class="right ">
-                        <p>$500</p>
+                    <div class="right">
+                        <p>$<span id="sub-total">500</span></p>
                     </div>
                 </div>
 
-                <div class="amount ">
-                    <div class="left ">
+                <div class="amount">
+                    <div class="left">
                         <p>Charge 10% VAT</p>
                     </div>
-                    <div class="right ">
-                        <p>$50</p>
+                    <div class="right">
+                        <p>$<span id="tax-amount">50</span></p>
                     </div>
                 </div>
                 <hr>
-                <div class="amount ">
-                    <div class="left ">
+                <div class="amount">
+                    <div class="left">
                         <h4>Total</h4>
                     </div>
-                    <div class="right ">
-                        <p>$550</p>
+                    <div class="right">
+                        <p>$<span id="grand-total">550</span></p>
                     </div>
                 </div>
             </div>
-            <button class="btn-style ">Book Now</button>
+            <button onclick="confirmMessage()" class="btn-style">Book Now</button>
         </div>
 
         <div class="booking-content ">
             <h1>discover <br> around the world</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
         </div>
-    </section>
-
-    <!--Script-->
-    <script src="js/script.js "></script>
+        </section>
+        <!--Script-->
+        <script src="js/script.js "></script>
 </body>
 
 </html>
